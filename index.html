@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preload" href="./assets/images/planet-1.svg" as="image" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +15,7 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./dist/css/styles.css" />
 
     <title>Odyssey Cosmos</title>
   </head>
@@ -29,7 +31,6 @@
             class="header__logo"
           />
         </a>
-
         <nav class="nav">
           <ul class="nav__links">
             <li class="nav__item"><a href="#">Stay Connected</a></li>
@@ -49,6 +50,70 @@
         </button>
       </div>
     </header>
-    <script src="./js/main.js"></script>
+    <main>
+      <section id="hero">
+        <div class="hero__banner">
+          <div class="container">
+            <img src="./assets/images/planet-1.svg" alt="hero banner" />
+            <h1 class="section__title">
+              Unveiling the Wonders of the Universe
+            </h1>
+          </div>
+        </div>
+        <div class="hero__lead">
+          <div class="container">
+            <aside class="space">
+              <img src="./assets/images/lost-in-space.svg" alt="space" />
+              <div class="space__wrapper spacewalks">
+                <div class="space__header">
+                  <img src="./assets/icons/time.svg" alt="time icon" />
+                  <h2 class="section__subtitle">Spacewalks</h2>
+                </div>
+                <div class="space__body">
+                  <img src="./assets/icons/chart-3.svg" alt="chart" />
+                  <img src="./assets/icons/chart-2.svg" alt="chart" />
+                </div>
+              </div>
+              <div class="space__wrapper exercising">
+                <div class="space__header">
+                  <img src="./assets/icons/love.svg" alt="love icon" />
+                  <h2 class="section__subtitle">Exercising</h2>
+                </div>
+                <img
+                  src="./assets/icons/chart-1.svg"
+                  alt="chart"
+                  class="chart"
+                />
+              </div>
+              <div class="space__wrapper">
+                <div class="space__header">
+                  <img src="./assets/icons/timer.svg" alt="timer icon" />
+                  <h2 class="section__subtitle">Total time in space</h2>
+                </div>
+                <p class="space__timer">352D 5H 49M 20S</p>
+              </div>
+            </aside>
+            <div class="hero__desc">
+              <p class="section__text">
+                At odissey, our mission is to inspire, educate, and ignite your
+                passion for the cosmos. We are your premier destination for all
+                things related to space exploration, astronomy, and the
+                mysteries of the universe. Whether you're a seasoned astronomer
+                or a curious novice, join us on a journey to the furthest
+                reaches of the cosmos.
+              </p>
+              <div class="hero__cta">
+                <button class="btn">Get Started</button>
+                <button class="btn">
+                  <span>Watch Video</span>
+                  <img src="./assets/icons/play.svg" alt="play video" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./dist/js/main.js"></script>
   </body>
 </html>
