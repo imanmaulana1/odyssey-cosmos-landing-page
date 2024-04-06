@@ -40,4 +40,18 @@ const setTotalTime = () => {
   }, 1000);
 };
 
-setTotalTime(); 
+setTotalTime();
+
+// Force close hamburger menu when user scroll down
+const closeHamburgerMenu = () => {
+  let scroll = window.scrollY;
+
+  if (scroll > 120) {
+    const navbar = document.querySelector('.nav');
+    navbar.classList.remove('show');
+  }
+};
+
+window.onscroll = () => {
+  closeHamburgerMenu();
+};
