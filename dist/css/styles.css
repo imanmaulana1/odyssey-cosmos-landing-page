@@ -3,6 +3,7 @@
   --primary-clr: #020305;
   --secondary-clr: #fff;
   --text-clr: #171e27;
+  --title-clr: #0d0f12;
   --footer-clr: #5c5050;
   --blue-clr: #a9c2cb;
   --hover-1: #5c5050;
@@ -146,6 +147,7 @@ button {
   font: normal var(--fw-500) 1.4rem / 24px var(--ff-jakarta-sans);
 }
 
+/*  
 /* ============== HEADER SECTION ============== */
 
 header .container {
@@ -253,6 +255,7 @@ header .container {
   }
 }
 
+/*  
 /* ============== HERO SECTION ============== */
 
 #hero {
@@ -440,6 +443,72 @@ header .container {
   }
 }
 
+/* 
+/* ============== PARTNER SECTION ============== */
+
+#partner {
+  margin-top: 78rem;
+  margin-bottom: 5rem;
+
+  & .container {
+    height: 204px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    & img {
+      width: 120px;
+      height: 24px;
+    }
+  }
+}
+
+/* 
+/* ============== COMMUNITY SECTION ============== */
+
+#community .container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+
+  & .section__title {
+    width: 327px;
+    color: var(--title-clr);
+  }
+
+  & .community__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    & article {
+      width: 327px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+
+      & img {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 4px;
+      }
+
+      & .section__subtitle {
+        color: var(--primary-clr);
+        font-size: 1.8rem;
+        font-weight: var(--fw-800);
+      }
+
+      & .section__text {
+        color: var(--text-clr);
+      }
+    }
+  }
+}
+
+/*  */
 /* ============== BREAKPOINTS ============== */
 
 @media screen and (width >= 576px) {
@@ -476,6 +545,31 @@ header .container {
           right: 10rem;
         }
       }
+    }
+  }
+
+  #partner {
+    margin-top: 61rem;
+    margin-bottom: -2rem;
+
+    & .container {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+  }
+
+  #community .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    & .section__title {
+      width: 100%;
+      color: var(--title-clr);
+    }
+
+    & .community__wrapper article {
+      width: 100%;
     }
   }
 }
@@ -559,6 +653,23 @@ header .container {
             height: 39px;
           }
         }
+      }
+    }
+  }
+
+  #partner .container {
+    flex-wrap: nowrap;
+    & img {
+      width: 120px;
+    }
+  }
+
+  #community .container {
+    & .community__wrapper {
+      justify-content: center;
+
+      & article {
+        width: 327px;
       }
     }
   }
@@ -702,6 +813,32 @@ header .container {
       }
     }
   }
+
+  #partner {
+    margin-top: -39rem;
+
+    & .container img {
+      height: 32px;
+    }
+  }
+
+  #community .container {
+    flex-direction: row;
+
+    & .section__title {
+      width: 375px;
+    }
+
+    & .community__wrapper {
+      flex: 1;
+      height: 414px;
+
+      & article {
+        width: 252px;
+        height: 191px;
+      }
+    }
+  }
 }
 
 @media screen and (width >= 1200px) {
@@ -774,6 +911,32 @@ header .container {
       }
     }
   }
+
+  #partner .container img {
+    width: 205px;
+    height: 80px;
+  }
+
+  #community .container {
+    & .section__title {
+      width: 375px;
+    }
+
+    & .community__wrapper {
+      flex: 1;
+      column-gap: 88px;
+      row-gap: 40px;
+
+      & article {
+        width: 252px;
+        height: 191px;
+
+        @media screen and (width >= 1440px) {
+          width: 270px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (width >= 1536px) {
@@ -784,6 +947,10 @@ header .container {
 
   .section__title {
     font-size: 6.4rem;
+  }
+
+  .section__subtitle {
+    font-size: 2.4rem;
   }
 
   .section__text {
@@ -903,6 +1070,49 @@ header .container {
               right: 20rem;
             }
           }
+        }
+      }
+    }
+  }
+
+  #partner {
+    margin-top: -50rem;
+
+    & .container img {
+      width: 225px;
+    }
+  }
+
+  #community .container {
+    & .section__title {
+      width: 573px;
+
+      @media screen and (1441px <= width <= 1600px) {
+        & {
+          width: 450px;
+          font-size: 4.2rem;
+        }
+      }
+    }
+
+    & .community__wrapper {
+      @media screen and (width >= 1600px) {
+        & {
+          row-gap: 74px;
+          column-gap: 108px;
+        }
+      }
+      & article {
+        width: 352px;
+        height: 292px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+        & img {
+          width: 100px;
+          height: 100px;
+          margin-bottom: 10px;
         }
       }
     }
