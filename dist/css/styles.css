@@ -140,7 +140,7 @@ button {
 }
 
 .section__subtitle {
-  font: normal var(--fw-600) 1.4rem / normal var(--ff-jakarta-sans);
+  font: normal var(--fw-600) 1.8rem / normal var(--ff-jakarta-sans);
 }
 
 .section__text {
@@ -508,6 +508,77 @@ header .container {
   }
 }
 
+/* 
+/* ============== EDUCATION SECTION ============== */
+
+#education .container {
+  position: relative;
+  padding-inline: 0;
+  margin-top: 5rem;
+
+  & .education__image {
+    width: 100%;
+    height: 393px;
+    overflow: hidden;
+    border-radius: 24px;
+
+    & img {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: left -9rem top 0;
+    }
+  }
+
+  & .education__title {
+    padding: 2.4rem 2.4rem 4rem 2.4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    & .section__title {
+      color: var(--secondary-clr);
+    }
+  }
+
+  & .education__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 24px;
+    position: relative;
+    top: -9rem;
+    width: 100%;
+
+    & .item {
+      padding: 2.4rem;
+      width: 327px;
+      height: 258px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+      background-color: var(--secondary-clr);
+      border-radius: 24px;
+      box-shadow: var(--box-shadow-2);
+
+      & .section__title {
+        color: var(--blue-clr);
+      }
+
+      & .section__subtitle {
+        color: var(--primary-clr);
+        font-weight: var(--fw-800);
+        margin-bottom: 4px;
+      }
+
+      & .section__text {
+        color: var(--text-clr);
+      }
+    }
+  }
+}
+
 /*  */
 /* ============== BREAKPOINTS ============== */
 
@@ -670,6 +741,26 @@ header .container {
 
       & article {
         width: 327px;
+      }
+    }
+  }
+
+  #education .container {
+    & .education__title {
+      padding: 4rem 9rem 5.2rem 9rem;
+
+      & .section__title {
+        text-align: center;
+      }
+    }
+
+    & .education__items {
+      position: absolute;
+      top: 25rem;
+
+      & .item {
+        width: 500px;
+        height: fit-content;
       }
     }
   }
@@ -839,6 +930,34 @@ header .container {
       }
     }
   }
+
+  #education .container {
+    & .education__image {
+      height: 360px;
+      border-radius: 40px;
+
+      & img {
+        object-position: left 0;
+        transform: scale(1.1);
+      }
+    }
+
+    & .education__title {
+      & .section__title {
+        color: var(--secondary-clr);
+      }
+    }
+
+    & .education__items {
+      flex-direction: row;
+      column-gap: 32px;
+
+      & .item {
+        width: 267px;
+        height: 282px;
+      }
+    }
+  }
 }
 
 @media screen and (width >= 1200px) {
@@ -918,6 +1037,8 @@ header .container {
   }
 
   #community .container {
+    margin-top: 10rem;
+
     & .section__title {
       width: 375px;
     }
@@ -937,6 +1058,26 @@ header .container {
       }
     }
   }
+
+  #education .container {
+    margin-top: 18rem;
+
+    & .education__title {
+      left: 0;
+      right: 0;
+
+      & .section__title {
+        max-width: 720px;
+        margin-inline: auto;
+      }
+    }
+
+    & .education__items {
+      & .item {
+        width: 307px;
+      }
+    }
+  }
 }
 
 @media screen and (width >= 1536px) {
@@ -947,6 +1088,10 @@ header .container {
 
   .section__title {
     font-size: 6.4rem;
+
+    @media screen and (1441px <= width <= 1600px) {
+      font-size: 5rem;
+    }
   }
 
   .section__subtitle {
@@ -1084,6 +1229,8 @@ header .container {
   }
 
   #community .container {
+    margin-top: 15rem;
+
     & .section__title {
       width: 573px;
 
@@ -1113,6 +1260,42 @@ header .container {
           width: 100px;
           height: 100px;
           margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  #education .container {
+    margin-top: 40rem;
+
+    & .education__image {
+      height: 533px;
+
+      & img {
+        object-position: left 0;
+      }
+    }
+
+    & .education__title {
+      padding-inline: 23rem;
+      padding-block: 8rem 6.4rem;
+
+      & .section__title {
+        max-width: 1220px;
+      }
+    }
+
+    & .education__items {
+      column-gap: 52px;
+      top: 38rem;
+
+      & .item {
+        padding: 5.2rem;
+        width: 452px;
+        height: 434px;
+
+        & .section__subtitle {
+          margin-bottom: 18px;
         }
       }
     }
