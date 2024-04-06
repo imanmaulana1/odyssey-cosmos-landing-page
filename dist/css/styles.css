@@ -146,9 +146,7 @@ button {
   font: normal var(--fw-500) 1.4rem / 24px var(--ff-jakarta-sans);
 }
 
-/*                                      
----- HEADER SECTION 
-*/
+/* ============== HEADER SECTION ============== */
 
 header .container {
   display: flex;
@@ -255,9 +253,7 @@ header .container {
   }
 }
 
-/*                                      
----- HERO SECTION 
-*/
+/* ============== HERO SECTION ============== */
 
 #hero {
   display: flex;
@@ -392,6 +388,9 @@ header .container {
           color: var(--secondary-clr);
           font: normal var(--fw-800) 1.6rem / normal var(--ff-jakarta-sans);
           letter-spacing: 8px;
+          display: flex;
+          justify-content: flex-end;
+          column-gap: 12px;
         }
       }
 
@@ -689,6 +688,7 @@ header .container {
           & .space__timer {
             font-size: 2rem;
             letter-spacing: 10px;
+            padding-right: 2rem;
           }
         }
 
