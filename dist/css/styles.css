@@ -699,6 +699,19 @@ header .container {
       background-image: url(../../assets/images/planet-3.svg);
     }
   }
+
+  #newsletter .container {
+    height: auto;
+    background-image: url(../../assets/images/planet-2.svg);
+    border-radius: 40px;
+    row-gap: 33px;
+
+    & .newsletter__desc {
+      & .section__text {
+        width: 398px;
+      }
+    }
+  }
 }
 
 @media screen and (width >= 768px) {
@@ -824,6 +837,19 @@ header .container {
           width: 500px;
           height: fit-content;
         }
+      }
+    }
+  }
+
+  #newsletter .container {
+    padding: 7rem 4rem;
+
+    & .form__wrapper {
+      flex-direction: row;
+      column-gap: 24px;
+
+      & input {
+        width: 416px;
       }
     }
   }
@@ -1134,6 +1160,22 @@ header .container {
       }
     }
   }
+
+  #newsletter .container {
+    padding: 12rem;
+    row-gap: 48px;
+
+    & .newsletter__desc {
+      & .section__title {
+        font-size: 5.4rem;
+      }
+
+      & .section__text {
+        width: 735px;
+        font-size: 1.8rem;
+      }
+    }
+  }
 }
 
 @media screen and (width >= 1536px) {
@@ -1349,6 +1391,26 @@ header .container {
             margin-bottom: 18px;
           }
         }
+      }
+    }
+  }
+
+  #newsletter .container {
+    & .newsletter__desc {
+      & .section__title {
+        font-size: 6.4rem;
+      }
+    }
+
+    & .form__wrapper {
+      flex-direction: row;
+      column-gap: 24px;
+
+      & input {
+        width: 649px;
+        padding: 2.6rem 3.2rem;
+        font-size: 24px;
+        border-radius: 24px;
       }
     }
   }
