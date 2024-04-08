@@ -42,7 +42,6 @@ const setTotalTime = () => {
 
 setTotalTime();
 
-// Force close hamburger menu when user scroll down
 const closeHamburgerMenu = () => {
   let scroll = window.scrollY;
 
@@ -52,6 +51,7 @@ const closeHamburgerMenu = () => {
   }
 };
 
+// Force close hamburger menu when user scroll down
 window.onscroll = () => {
   closeHamburgerMenu();
 };
