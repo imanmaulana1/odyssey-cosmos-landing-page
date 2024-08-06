@@ -21,13 +21,13 @@ This is a personal portfolio website showcasing my projects, skills, and experie
 1. Clone the repository:
 
 ```bash
-  git clone https://github.com/imanmaulana1/Odyssey-Cosmos-Landing-Page.git
+  git clone https://github.com/imanmaulana1/odyssey-cosmos-landing-page.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-  cd Odyssey-Cosmos-Landing-Page
+  cd odyssey-cosmos-landing-page
 ```
 
 3. Open **index.html** in your web browser.
